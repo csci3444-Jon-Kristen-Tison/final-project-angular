@@ -1,0 +1,20 @@
+<h1>
+    {{name}}
+</h1>
+
+<body>
+    <!-- button to execute toggleToDisplayTeachers() when clicked -->
+    <button (click)="toggleToDisplayTeachers()">Show/Hide Teacher List</button>
+    <div *ngIf=isToDisplayTeachers>
+        <h2>Teachers</h2>
+        <div *ngFor="let teacher of teachers">
+            <li>Teahcer ID: {{teacher.teacherId}}</li>
+            <li>Name: {{teacher.name}}</li>
+            <li>Lastname: {{teacher.lastname}}</li>
+            <li>Title: {{teacher.title}}</li>
+            <li>Age: {{teacher.age}}</li>
+            <li>IsFullTime: {{teacher.isFullTime}}</li>
+            <p>{{teacher.completed}}</p>
+        </div>
+    </div>
+</body>
